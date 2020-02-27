@@ -1,18 +1,116 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:fillViewport="true">
 
-  <TextView
-      android:layout_width="wrap_content"
+  <androidx.constraintlayout.widget.ConstraintLayout
+      android:layout_width="match_parent"
       android:layout_height="wrap_content"
-      android:text="Hello World!"
-      app:layout_constraintBottom_toBottomOf="parent"
-      app:layout_constraintLeft_toLeftOf="parent"
-      app:layout_constraintRight_toRightOf="parent"
-      app:layout_constraintTop_toTopOf="parent" />
+      android:padding="20dp"
+      tools:context=".MainActivity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button_check"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="check"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/switch_test_key" />
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/switch_binary_busybox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text='"busybox" binary'
+        android:textColor="#8888"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/switch_installed_apps"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text='installed apps'
+        android:textColor="#8888"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/switch_binary_busybox" />
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/switch_running_processes"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text='running processes'
+        android:textColor="#8888"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/switch_installed_apps" />
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/switch_rw_paths"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text='rw paths'
+        android:textColor="#8888"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/switch_running_processes" />
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/switch_sefetyNet"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text='safetyNet'
+        android:textColor="#8888"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/switch_rw_paths" />
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/switch_selinux"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text='SELinux flag'
+        android:textColor="#8888"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/switch_sefetyNet" />
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/switch_binary_su"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text='"su" binary'
+        android:textColor="#8888"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/switch_selinux" />
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/switch_exec_su"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text='execute "su"'
+        android:textColor="#8888"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/switch_binary_su" />
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/switch_test_key"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text='test key build'
+        android:textColor="#8888"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/switch_exec_su" />
+
+  </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>
