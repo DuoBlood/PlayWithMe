@@ -1,3 +1,13 @@
 <resources>
   <string name="app_name">PlayWithMe</string>
+  
+  <string-array name="mountain_king">
+    <item>Настоящая война будет завтра, с бодуна!</item>
+    <item>Здесь есть хоть одна винная лавка?</item>
+    <item>Я думаю, это надо обмыть.</item>
+    <item>Как говорит наш любимый шеф, за чужой счет пьют и язвенники, и трезвенники.</item>
+    <item>Чем ты тут, черт возьми, занимаешься?</item>
+    <item>Где тут кабак?</item>
+    <item>Давай напьемся!</item>
+  </string-array>
 </resources>

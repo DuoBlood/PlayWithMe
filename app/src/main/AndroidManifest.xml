@@ -17,6 +17,13 @@
         <category android:name="android.intent.category.LAUNCHER" />
       </intent-filter>
     </activity>
+
+    <service
+        android:name=".CheckService"
+        android:enabled="true"
+        android:isolatedProcess="true"
+        android:process=":tmpService" />
+
   </application>
 
 </manifest>
